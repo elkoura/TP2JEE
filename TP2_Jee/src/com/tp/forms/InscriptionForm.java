@@ -1,16 +1,9 @@
 package com.tp.forms;
 
 import java.util.HashMap;
-
-
-
-
-
-
-
 import javax.servlet.http.HttpServletRequest;
 
-import com.tp.beans.*;
+import com.tp.beans.Client;
 
 public final class InscriptionForm {
 
@@ -44,7 +37,6 @@ public final class InscriptionForm {
 		String motDePasse = request.getParameter(CHAMP_PASS);		
 		String confirmation = request.getParameter(CHAMP_CONF);
 		
-    
     	 
  	    try {
 			validationNom(nom,prenom);

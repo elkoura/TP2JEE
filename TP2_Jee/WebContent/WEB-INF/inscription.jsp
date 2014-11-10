@@ -5,14 +5,19 @@
     <head>
         <meta charset="utf-8" />
         <title>Inscription</title>
-        <link type="text/css" rel="stylesheet" href="inc/style.css" />
+    <link type="text/css" rel="stylesheet" href="inc/style.css" />
+         <link type="text/css" rel="stylesheet" href="inc/bootstrap.min.css" />
+        <link type="text/css" rel="stylesheet" href="inc/bootstrap.css" />
+        
     </head>
     <body>
+    <br>
+    <div class="container">
         <form method="post" action="inscription">
             <fieldset>
-                <legend>Creation d'un compte client</legend>
+                <legend>Creation du compte client</legend>
                 <p>Vous pouvez vous inscrire via ce formulaire.</p>
-                
+                <div class="form-group">
                 <label for="nom">Nom </label>
                 <input type="text" id="nom" name="nom" value="<c:out value="${user.nom}"/>" size="20" maxlength="20" />
                 <span class="erreur">${form.erreurs['nom']}</span>
@@ -38,18 +43,20 @@
                 <span class="erreur">${form.erreurs['motdepasse']}</span>
                 <br />
 
-                <label for="confirmation">Confirmation du mot de passe <span class="requis">*</span></label>
+                <label for="confirmation">Confirmation <span class="requis">*</span></label>
                 <input type="password" id="confirmation" name="confirmation" value="" size="20" maxlength="20" />
                 <span class="erreur">${form.erreurs['confirmation']}</span>
                 <br />
-
+				</div>
                
-
-                <input type="submit" value="Inscription" class="sansLabel" />
+	<div class="form-group">
+               <button type="submit" class="btn btn-primary">Valider</button>
                 <br />
+                </div>
                 
                 <p class="${empty form.erreurs ? 'succes' : 'erreur'}">${form.resultat}</p>
             </fieldset>
         </form>
+        </div>
     </body>
 </html>

@@ -10,15 +10,38 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   
+ 
   <servlet>
     <servlet-name>Inscription</servlet-name>
     <servlet-class>com.tp.servlets.Inscription</servlet-class>
   </servlet>
+  
   <servlet-mapping>
     <servlet-name>Inscription</servlet-name>
     <url-pattern>/inscription</url-pattern>
   </servlet-mapping>
   
+  
+  <servlet>
+	<servlet-name>Connexion</servlet-name>
+	<servlet-class>com.tp.servlets.Connexion</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>Connexion</servlet-name>
+	<url-pattern>/connexion</url-pattern>
+</servlet-mapping>
+
+  
+   <servlet>
+	<servlet-name>Deconnexion</servlet-name>
+	<servlet-class>com.tp.servlets.Deconnexion</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>Deconnexion</servlet-name>
+	<url-pattern>/deconnexion</url-pattern>
+</servlet-mapping>
   
   
 </web-app>
