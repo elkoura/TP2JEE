@@ -9,12 +9,17 @@
          <link type="text/css" rel="stylesheet" href="inc/bootstrap.min.css" />
         <link type="text/css" rel="stylesheet" href="inc/bootstrap.css" />
     </head>
-    <body>
+    <body >
     
     <h2> Bienvenu sur votre site TravelExpress ! </h2>
-    <br>
     
+   <!--  <div class = "image">
+    <img src="inc/discover.jpg" alt="Mountain" style="width:90%;height:228px;" >
+    </div> -->
+    
+   
     <div class="container">
+   
         <form role= form class = "form-signin" method="post" action="connexion">
             <fieldset>
                 <legend>Connexion</legend>
@@ -49,7 +54,6 @@
         
         </div>
         
-       
-        
+   
     </body>
 </html>

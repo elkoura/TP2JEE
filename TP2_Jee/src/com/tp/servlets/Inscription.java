@@ -47,6 +47,7 @@ public class Inscription extends HttpServlet {
     	{
     		     session.setAttribute( ATT_SESSION_USER, user );
     			conBDD.addUser(user);
+    		
     			 this.getServletContext().getRequestDispatcher( VUE_SUCCES ).forward( request, response );
     	}
     			

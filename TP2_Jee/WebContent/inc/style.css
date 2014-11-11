@@ -18,6 +18,17 @@ legend {
     color: #0568CD;
 }
 
+tr.pair{
+	background-color: #efefef;
+}
+tr.impair{
+	background-color: #fff;	
+}
+
+.image {
+	text-align: ce
+}
+
 /* Forms --------------------------------------------------------------------------------------- */
 form .erreur {
     color: #900;

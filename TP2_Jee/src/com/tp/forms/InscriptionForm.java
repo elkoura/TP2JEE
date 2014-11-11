@@ -1,6 +1,7 @@
 package com.tp.forms;
 
 import java.util.HashMap;
+
 import javax.servlet.http.HttpServletRequest;
 
 import com.tp.beans.Client;
@@ -79,6 +80,8 @@ public final class InscriptionForm {
 		return user;
 
 	}
+	
+	
 	
 	
 

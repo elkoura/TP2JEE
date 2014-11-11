@@ -7,7 +7,15 @@ public class Annonce {
 	private String arrivee;
 	private String date_depart;
 	private int nbr_places;
+	private int prix;
+	public int getPrix() {
+		return prix;
+	}
+	public void setPrix(int prix) {
+		this.prix = prix;
+	}
 	private boolean complet;
+	
 	public String getConducteur() {
 		return conducteur;
 	}

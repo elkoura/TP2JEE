@@ -11,21 +11,27 @@
         
     </head>
     <body>
-    <br>
+    
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" ><a href="<c:url value="/creationClient"/>">Accueil</a></li>
+  <li role="presentation"><a href="<c:url value="/recherchet"/>">Recherche</a></li>
+  <li role="presentation" class="active"><a href="<c:url value="/creerAnnonce"/>">Proposer un trajet</a></li>
+  <li role="presentation"><a href="<c:url value="/listeAnnonces"/>">Voir toutes les annonces</a></li>
+    <li role="presentation"><a href="<c:url value="/listeClients"/>">Profil</a></li>
+	
+</ul>
+
     <div class="container">
-        <form method="post" action="inscription">
+    <br>
+        <form method="post" action="creerAnnonce">
             <fieldset>
                 <legend>Merci d'insérer les information de votre trajet</legend>
                 
               <div class="form-group">
-                <label for="nom">Nom </label>
-                <input type="text" id="nom" name="nom" value="<c:out value="${sessionScope.sessionUtilisateur.nom}"/>" size="20" maxlength="20" />
-                
-                <br />
-                
-                <label for="nom">Prénom </label>
-                <input type="text" id="prenom" name="prenom" value="<c:out value="${sessionScope.sessionUtilisateur.prenom}}"/>" size="20" maxlength="20" />
-               
+              <p> Conducteur</p>
+                <label for="nom">E-mail </label>
+                <input type="text" id="conducteur" name="conducteur" value="<c:out value="${sessionScope.sessionUtilisateur.email}"/>" size="20" maxlength="20" />
+ 
                 <br />
                 </div>
                
@@ -42,12 +48,17 @@
                 
 
                 <label for="date_depart">Date départ <span class="requis">*</span></label>
-                <input type="datetime" id="date" name="date" value="" size="20" maxlength="60" />
+                <input type="datetime" id="date_depart" name="date_depart" value="" placeholder="YYYY-MM-DD" size="20" maxlength="60" />
                 
                 <br />
 
                 <label for="nbr_places">Nombre de places <span class="requis">*</span></label>
                 <input type="text" id="nbr_places" name="nbr_places" value="" size="20" maxlength="20" />
+                
+                <br />
+                
+                 <label for="nbr_places">Prix <span class="requis">*</span></label>
+                <input type="text" id="prix" name="prix" value="" size="20" maxlength="20" />
                 
                 <br />
 

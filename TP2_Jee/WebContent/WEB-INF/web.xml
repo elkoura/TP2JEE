@@ -9,39 +9,63 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
- 
   <servlet>
     <servlet-name>Inscription</servlet-name>
     <servlet-class>com.tp.servlets.Inscription</servlet-class>
   </servlet>
-  
   <servlet-mapping>
     <servlet-name>Inscription</servlet-name>
     <url-pattern>/inscription</url-pattern>
   </servlet-mapping>
-  
-  
   <servlet>
-	<servlet-name>Connexion</servlet-name>
-	<servlet-class>com.tp.servlets.Connexion</servlet-class>
-</servlet>
-
-<servlet-mapping>
-	<servlet-name>Connexion</servlet-name>
-	<url-pattern>/connexion</url-pattern>
-</servlet-mapping>
-
+    <servlet-name>Connexion</servlet-name>
+    <servlet-class>com.tp.servlets.Connexion</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Connexion</servlet-name>
+    <url-pattern>/connexion</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Deconnexion</servlet-name>
+    <servlet-class>com.tp.servlets.Deconnexion</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Deconnexion</servlet-name>
+    <url-pattern>/deconnexion</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CreationAnnonce</servlet-name>
+    <servlet-class>com.tp.servlets.CreationAnnonce</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreationAnnonce</servlet-name>
+    <url-pattern>/creerAnnonce</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ListeAnnonces</servlet-name>
+    <servlet-class>com.tp.servlets.ListeAnnonces</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListeAnnonces</servlet-name>
+    <url-pattern>/listeAnnonces</url-pattern>
+  </servlet-mapping>
   
-   <servlet>
-	<servlet-name>Deconnexion</servlet-name>
-	<servlet-class>com.tp.servlets.Deconnexion</servlet-class>
-</servlet>
-
-<servlet-mapping>
-	<servlet-name>Deconnexion</servlet-name>
-	<url-pattern>/deconnexion</url-pattern>
-</servlet-mapping>
+    <servlet>
+    <servlet-name>Recherche</servlet-name>
+    <servlet-class>com.tp.servlets.Recherche</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Recherche</servlet-name>
+    <url-pattern>/recherche</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  
   
   
 </web-app>
