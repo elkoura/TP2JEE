@@ -14,6 +14,7 @@ public final class AnnonceForm {
 	public static final String CHAMP_PLACES= "nbr_places";
 	public static final String CHAMP_PRIX= "prix";
 	
+	
 	public Annonce ajoutAnnonce(HttpServletRequest request) {
 		Annonce annonce = new Annonce();
 		

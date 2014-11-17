@@ -19,7 +19,10 @@
     
    
     <div class="container">
-   
+   <div class="row">
+   <div class="col-md-4">
+<!-- div avec un element de presentation simple (le well) -->
+<div class="well">
         <form role= form class = "form-signin" method="post" action="connexion">
             <fieldset>
                 <legend>Connexion</legend>
@@ -51,7 +54,20 @@
         </form>
          <p>Nouveau client ? <a href="<c:url value="/inscription"/>">Inscrivez-vous !</a></p>
         
+        </div>
         
+        </div>
+        
+         <div class="col-xs-6">
+<!-- div avec un element de presentation simple (le well) -->
+<div class="well">
+
+	<img alt="covoiturage" src="inc/cov.jpg">
+	
+ </div>
+        </div>
+        
+        </div>
         </div>
         
    

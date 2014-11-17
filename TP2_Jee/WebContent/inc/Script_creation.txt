@@ -1,0 +1,130 @@
+password: azert
+bdd : bdd_Jee
+
+CREATE TABLE clients(
+   id INT NOT NULL AUTO_INCREMENT,
+   nom VARCHAR(40) ,
+   prenom VARCHAR(40) ,
+   telephone  VARCHAR(20),
+   email  VARCHAR(20) NOT NULL,
+   mot_de_passe  VARCHAR(40) NOT NULL,
+   credit INT default 500,
+   preferences VARCHAR(45) NOT NULL DEFAULT 'Sans preferences',
+   PRIMARY KEY ( id )
+);
+
+
+CREATE TABLE annonces (
+   id INT NOT NULL AUTO_INCREMENT,
+   conducteur VARCHAR(40) ,
+   depart VARCHAR(20),
+   arrivee VARCHAR(20),
+   date_depart DATETIME NOT NULL ,
+   date_creation DATETIME NOT NULL DEFAULT NOW() ,
+   nbr_places INT,
+   prix INT,
+
+   PRIMARY KEY ( id )
+);
+
+CREATE TABLE reservations(
+id INT NOT NULL AUTO_INCREMENT,
+id_passager INT NOT NULL,
+id_annonce INT NOT NULL ,
+ date_creation DATETIME NOT NULL DEFAULT NOW() ,
+
+  PRIMARY KEY(id)
+);
+
+
+
+
+
+
+
+
+
+
+package com.tp.servlets;
+
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.tp.bdd.Bdd;
+import com.tp.beans.Client;
+import com.tp.forms.InscriptionForm;
+
+public class Inscription extends HttpServlet {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public static final String ATT_USER = "user";
+	public static final String ATT_FORM = "form";
+	public static final String ATT_SESSION_USER = "sessionUtilisateur";
+	public static final String VUE_INSC = "/WEB-INF/inscription.jsp";
+	public static final String VUE_SUCCES = "/WEB-INF/main.jsp";
+
+
+
+
+	public void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException{
+		/* Affichage de la page d'inscription */
+		this.getServletContext().getRequestDispatcher( VUE_INSC ).forward( request, response );
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)	throws ServletException, IOException {
+
+		InscriptionForm form = new InscriptionForm();
+
+
+
+		Client user = form.inscrUser(request);
+		System.out.println("mes pref :"+user.getNom());
+		System.out.println("mes pref :"+user.getPreferences());
+		System.out.println("mes pref :"+user.getEmail());
+		
+		if(form.getErreurs().isEmpty())
+		{
+			Bdd conBDD = new Bdd();
+			HttpSession session = request.getSession();
+			session.setAttribute( ATT_SESSION_USER, user );
+			System.out.println("mes pref :"+user.getPreferences());
+			conBDD.addUser(user);
+
+			this.getServletContext().getRequestDispatcher( VUE_SUCCES ).forward( request, response );
+		}
+
+
+		request.setAttribute(ATT_FORM, form);
+		request.setAttribute(ATT_USER, user);
+
+		// rediiger vers la page de formulaire !!!!
+		this.getServletContext().getRequestDispatcher( VUE_INSC ).forward( request, response );
+	
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -24,7 +24,7 @@ public class Recherche extends HttpServlet {
     public static final String ATT_FORM = "form";
     public static final String ATT_SESSION_USER = "sessionUtilisateur";
     public static final String VUE_RECH = "/WEB-INF/recherche.jsp";
-
+    public boolean first = true;
     
     public Recherche() {
         super();
@@ -35,6 +35,8 @@ public class Recherche extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		request.setAttribute("first", first );
 		this.getServletContext().getRequestDispatcher(VUE_RECH).forward(request, response);
 	}
 
@@ -55,7 +57,8 @@ public class Recherche extends HttpServlet {
 		HttpSession session = request.getSession();
 		
 	session.setAttribute("resultat", listeResultat);
-
+	first= false;
+	request.setAttribute("first", first );
 	this.getServletContext().getRequestDispatcher(VUE_RECH).forward(request, response);
 	}
 

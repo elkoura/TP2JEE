@@ -14,7 +14,7 @@
     
 <ul class="nav nav-tabs" role="tablist">
   <li role="presentation" ><a href="<c:url value="/creationClient"/>">Accueil</a></li>
-  <li role="presentation"><a href="<c:url value="/recherchet"/>">Recherche</a></li>
+  <li role="presentation"><a href="<c:url value="/recherche"/>">Recherche</a></li>
   <li role="presentation" class="active"><a href="<c:url value="/creerAnnonce"/>">Proposer un trajet</a></li>
   <li role="presentation"><a href="<c:url value="/listeAnnonces"/>">Voir toutes les annonces</a></li>
     <li role="presentation"><a href="<c:url value="/listeClients"/>">Profil</a></li>
@@ -60,9 +60,7 @@
                  <label for="nbr_places">Prix <span class="requis">*</span></label>
                 <input type="text" id="prix" name="prix" value="" size="20" maxlength="20" />
                 
-                <br />
 
-               
 				</div>
                
 	<div class="form-group">

@@ -1,13 +1,20 @@
 package com.tp.beans;
 
 public class Annonce {
-	
+	private int id;
 	private String conducteur;
 	private String depart;
 	private String arrivee;
 	private String date_depart;
 	private int nbr_places;
 	private int prix;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public int getPrix() {
 		return prix;
 	}

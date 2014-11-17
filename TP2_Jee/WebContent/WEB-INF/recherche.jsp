@@ -41,7 +41,7 @@
   
   <button type="submit" class="btn btn-default">Recherche</button>
 </form>
-</br>
+<br>
   <c:if test="${ !empty sessionScope.resultat }">
 <table class="table table-striped">
                 <tr>
@@ -64,18 +64,18 @@
                     <td><c:out value="${ annonce.date_depart }"/></td>
                     <td><c:out value="${ annonce.nbr_places }"/></td>
                     <td><c:out value="${ annonce.prix} €"/></td>
-                    <%-- Lien vers la servlet de suppression, avec passage du nom du client - c'est-à-dire la clé de la Map - en paramètre grâce à la balise <c:param/>. --%>
-                   <%--  <td class="action">
-                        <a href="<c:url value="/suppressionClient"><c:param name="nomClient" value="${ mapClients.key }" /></c:url>">
-                            <img src="<c:url value="/inc/supprimer.png"/>" alt="Supprimer" />
+                    <%-- Lien vers la servlet de reservation, avec passage du id de annonce -  --%>
+                    <td class="action">
+                        <a href="<c:url value="/reservation"><c:param name="idAnnonce" value="${ annonce.id }" /></c:url>">
+                            <img src="<c:url value="/inc/bouton-res.png"/>" alt="Reserver" />
                         </a>
-                    </td> --%>
+                    </td> 
                 </tr>
                 </c:forEach>
             </table>
 
 </c:if>
- <c:if test="${ empty sessionScope.resultat }">
+ <c:if test="${ empty sessionScope.resultat && !first }">
  <div class="alert alert-danger" role="alert">Désolé, aucune annonce ne correspond aux critères de votre recherche. </div>
  </c:if>
 </body>

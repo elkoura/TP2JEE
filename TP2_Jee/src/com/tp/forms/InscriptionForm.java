@@ -16,6 +16,7 @@ public final class InscriptionForm {
 	public static final String CHAMP_TEL = "telephone";
 	public static final String ATT_ERRORS = "erreurs";
 	public static final String ATT_RESULT = "resultat";
+	public static final String CHAMP_PREFERENCES =  "preferences";
 
 
 	private String              resultat;
@@ -37,6 +38,7 @@ public final class InscriptionForm {
 		String email = request.getParameter(CHAMP_EMAIL);
 		String motDePasse = request.getParameter(CHAMP_PASS);		
 		String confirmation = request.getParameter(CHAMP_CONF);
+		String preferences = request.getParameter(CHAMP_PREFERENCES);
 		
     	 
  	    try {
@@ -69,6 +71,8 @@ public final class InscriptionForm {
 			setErreur(CHAMP_PASS, e.getMessage());
 		}
 		user.setMot_de_passe(motDePasse);
+		
+		user.setPreferences(preferences);
 		
 
 		 if ( erreurs.isEmpty() ) {

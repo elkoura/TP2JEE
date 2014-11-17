@@ -3,13 +3,27 @@ package com.tp.beans;
 
 
 public class Client {
-	
+	private int id;
+
 	private String nom;
 	private String prenom;
 	private String telephone;
 	private String email;
 	private String mot_de_passe;
+	private String preferences;
 	
+	public String getPreferences() {
+		return preferences;
+	}
+	public void setPreferences(String preferences) {
+		this.preferences = preferences;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	
 	public String getEmail() {
 		return email;

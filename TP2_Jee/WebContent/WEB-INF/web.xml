@@ -49,14 +49,24 @@
     <servlet-name>ListeAnnonces</servlet-name>
     <url-pattern>/listeAnnonces</url-pattern>
   </servlet-mapping>
-  
-    <servlet>
+  <servlet>
     <servlet-name>Recherche</servlet-name>
     <servlet-class>com.tp.servlets.Recherche</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Recherche</servlet-name>
     <url-pattern>/recherche</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+   <servlet>
+    <servlet-name>Reservation</servlet-name>
+    <servlet-class>com.tp.servlets.Reservation</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Reservation</servlet-name>
+    <url-pattern>/reservation</url-pattern>
   </servlet-mapping>
   
   
