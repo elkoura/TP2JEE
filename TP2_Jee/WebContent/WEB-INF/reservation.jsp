@@ -30,7 +30,7 @@ function confirm() {
 				un trajet</a></li>
 		<li role="presentation"><a href="<c:url value="/listeAnnonces"/>">Voir
 				toutes les annonces</a></li>
-		<li role="presentation"><a href="<c:url value="/listeClients"/>">Profil</a></li>
+		<li role="presentation"><a href="<c:url value="/profil"/>">Profil</a></li>
 
 	</ul>
 

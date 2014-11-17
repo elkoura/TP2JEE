@@ -48,12 +48,10 @@
                 <span class="erreur">${form.erreurs['confirmation']}</span>
                 <br />
                 
-                 <br />
-                <br />
-                 <label for="nbr_places">Préferences </label>
+               
 <!--                 <TEXTAREA rows="3" cols="35" name="preferences" id= "preferences" placeholder="Tapez vos préferences"  ></TEXTAREA>
  -->               
-                  <input type="text" id="preferences" name="preferences" value="" size="20" maxlength="20" />
+             
   
 				</div>
 				

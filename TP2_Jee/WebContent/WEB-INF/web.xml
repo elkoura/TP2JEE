@@ -7,7 +7,7 @@
     <welcome-file>index.jsp</welcome-file>
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>/connexion</welcome-file>
   </welcome-file-list>
   <servlet>
     <servlet-name>Inscription</servlet-name>
@@ -57,10 +57,7 @@
     <servlet-name>Recherche</servlet-name>
     <url-pattern>/recherche</url-pattern>
   </servlet-mapping>
-  
-  
-  
-   <servlet>
+  <servlet>
     <servlet-name>Reservation</servlet-name>
     <servlet-class>com.tp.servlets.Reservation</servlet-class>
   </servlet>
@@ -69,11 +66,14 @@
     <url-pattern>/reservation</url-pattern>
   </servlet-mapping>
   
-  
-  
-  
-  
-  
+   <servlet>
+    <servlet-name>Profil</servlet-name>
+    <servlet-class>com.tp.servlets.Profil</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Profil</servlet-name>
+    <url-pattern>/profil</url-pattern>
+  </servlet-mapping>
   
   
   

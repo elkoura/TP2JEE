@@ -5,10 +5,10 @@
 <link type="text/css" rel="stylesheet" href="inc/bootstrap.min.css" />
 
 <ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" lass="active" ><a href="<c:url value="/creationClient"/>">Accueil</a></li>
-  <li role="presentation" c><a href="<c:url value="/recherche"/>">Recherche</a></li>
+  <li role="presentation" class="active" ><a href="<c:url value="/creationClient"/>">Accueil</a></li>
+  <li role="presentation" ><a href="<c:url value="/recherche"/>">Recherche</a></li>
   <li role="presentation" ><a href="<c:url value="/creerAnnonce"/>">Proposer un trajet</a></li>
   <li role="presentation"><a href="<c:url value="/listeAnnonces"/>">Voir toutes les annonces</a></li>
-    <li role="presentation"><a href="<c:url value="/listeClients"/>">Profil</a></li>
+    <li role="presentation"><a href="<c:url value="/profil"/>">Profil</a></li>
 	
 </ul>
